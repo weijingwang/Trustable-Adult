@@ -98,6 +98,7 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
 
     message.channel.send({embed: {
     color: 3447003,
+    description: "*I am a trustable adult and i help and i dont like bad boys/girls*",
     author: {
       name: bot.user.username + "'s",
       icon_url: bot.user.avatarURL
