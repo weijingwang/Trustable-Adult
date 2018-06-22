@@ -59,6 +59,18 @@ bot.on("message", async message => {
     message.channel.send("you wannna know huh huh? https://kawaiikitsunelover645.itch.io/sounds-of-the-night");
   }
 
+//joke
+var myArray = ['January', 'February', 'March'];    
+var random_joke = myArray[Math.floor(Math.random() * myArray.length)];
+
+
+  if(command === "/joke") {
+    message.channel.send(random_joke);
+  }
+
+
+
+//help
   if(command === "/help") {
 
     message.channel.send({embed: {
@@ -83,6 +95,10 @@ bot.on("message", async message => {
       {
         name: "/github",
         value: "get github repo link"
+      },
+      {
+        name: "/vn",
+        value: "show suprise"
       }
     ],
     footer: {
