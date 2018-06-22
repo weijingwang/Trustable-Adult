@@ -46,36 +46,10 @@ bot.on("message", async message => {
     message.channel.send("ok so on June 22, ");
   }
 
-  if (command == "/help") {
-    message.channel.send({embed: {
-    color: 3447003,
-    author: {
-      name: bot.user.username + "'s",
-      icon_url: client.user.avatarURL
-    },
-    title: "xX_HELP_Xx",
-    fields: [{
-        name: "/ping",
-        value: "I say Pong!"
-      },
-      {
-        name: "/say",
-        value: "make me say something"
-      },
-      {
-        name: "/info",
-        value: "make me explain myself"
-      }
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "© 2018 " + current_year + " Weijing Wang"
-    }
+  if (command === "/help") {
+    message.channel.send("help")
   }
-});// part of help dont touch
-  }//part of help dont touch
-
+//end of help
 
 });//end dont touch
 
