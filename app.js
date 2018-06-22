@@ -42,15 +42,36 @@ bot.on("message", async message => {
     message.channel.send(sayMessage);
   }
 
-  if(command === "/info") {
-    message.channel.send("ok so on June 22, ");
+  if(command === "/help") {
+
+    message.channel.send({embed: {
+    color: 3447003,
+    author: {
+      name: bot.user.username + "'s",
+      icon_url: bot.user.avatarURL
+    },
+    title: "xX_HELP_Xx",
+    fields: [{
+        name: "/ping",
+        value: "I say Pong!"
+      },
+      {
+        name: "/say",
+        value: "make me say something"
+      },
+      {
+        name: "/info",
+        value: "make me explain myself"
+      }
+    ],
+    footer: {
+      icon_url: bot.user.avatarURL,
+      text: "© 2018 " + current_year + " Weijing Wang"
+    }
+  }
+});
   }
 
-  if (command === "/help") {
-    message.channel.send("help")
-  }
-//end of help
-
-});//end dont touch
+});
 
 bot.login(config.token);
