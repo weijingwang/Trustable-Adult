@@ -42,6 +42,15 @@ bot.on("message", async message => {
     message.channel.send(sayMessage);
   }
 
+  if(command === "/info") {
+    message.channel.send("ok so on June 22 2018, I made this bot\
+      I saw a lot of bots but all of them didn't work for me and they made me\
+      really mad. So I decided to make my own bot by glue coding since I\
+      don't know javascript yeah?\
+      this bot is currently run on my computer so it will only be on when I\
+      am on so far. I might migrate it to somewhere else maybe.");
+  }
+
   if(command === "/help") {
 
     message.channel.send({embed: {
@@ -66,7 +75,7 @@ bot.on("message", async message => {
     ],
     footer: {
       icon_url: bot.user.avatarURL,
-      text: "© 2018 " + current_year + " Weijing Wang"
+      text: "© 2018-" + current_year + " Weijing Wang"
     }
   }
 });
