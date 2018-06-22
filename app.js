@@ -52,7 +52,11 @@ bot.on("message", async message => {
   }
 
   if(command === "/github") {
-    message.channel.send("Here is the link: https://github.com/weijingwang/Trustable-Adult");
+    message.channel.send("Here is the link to the Github Repo: https://github.com/weijingwang/Trustable-Adult");
+  }
+
+  if(command === "/vn") {
+    message.channel.send("you wannna know huh huh? https://kawaiikitsunelover645.itch.io/sounds-of-the-night");
   }
 
   if(command === "/help") {
