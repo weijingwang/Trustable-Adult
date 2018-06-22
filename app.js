@@ -29,7 +29,7 @@ bot.on("message", async message => {
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  //detect "fuck" || "Fuck" || "shit" || "Shit" || "bitch" || "Bitch"
+  //detect "fuck" || "shit" || "bitch"
   //the ".toLowerCase()" check all instances of the word, regardless of capitalization
   if(command.toLowerCase() === "fuck") {
     message.channel.send("HEY!!! WHY DO YOU THINK THAT **LANGUAGE** IS **APPROPRIATE** ON **THIS** SERVER HUH???!!!");
