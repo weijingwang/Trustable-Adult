@@ -7,7 +7,7 @@ const config = require("./config.json");
 const current_year = new Date().getFullYear();
 
 bot.on("ready", () => {
-  console.log(`Botbot start with ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} guilds.`); 
+  console.log(`Botbot start with ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} guilds.`);
   bot.user.setActivity(`do /help`);
 });
 
@@ -21,6 +21,10 @@ bot.on("guildDelete", guild => {
   bot.user.setActivity(`Serving ${bot.guilds.size} servers`);
 });
 
+function checkIfBadWords(badWord) {
+  return command.toLowerCase(.includes(badWord));
+}
+
 bot.on("message", async message => {
 
   if(message.author.bot) return;
@@ -31,28 +35,28 @@ bot.on("message", async message => {
   const command = args.shift().toLowerCase();
   //detect "fuck" || "shit" || "bitch"
   //the ".toLowerCase()" check all instances of the word, regardless of capitalization
-  if(command.toLowerCase() === "fuck") {
+  if (checkIfBadWords("fuck")) {
     message.channel.send("HEY!!! WHY DO YOU THINK THAT **LANGUAGE** IS **APPROPRIATE** ON **THIS** SERVER HUH???!!!");
   }
 
-  if(command.toLowerCase() === "shit") {
+  if(checkIfBadWords("shit")) {
     message.channel.send('**not cool**, you know better, buddy! Try, "Bowel Movement" instead.');
   }
-  
-  if(command.toLowerCase() === "bitch") {
+
+  if(checkIfBadWords("bitch")) {
     message.channel.send("Did you mean: *a female dog, wolf, fox, or otter?*");
   }
-  
+
   //sorry i type that it is against my religion but it is right sorry
   //commands
   if(command === "/ping") {
     message.channel.send("Pong!");
   }
-  
+
   if(command === "/say") {
 
     const sayMessage = args.join(" ");
-    message.delete().catch(O_o=>{}); 
+    message.delete().catch(O_o=>{});
     message.channel.send(sayMessage);
   }
 
@@ -78,8 +82,8 @@ bot.on("message", async message => {
 //joke
 var pickuplines = ["Are you a sea lion? Because I can sea you lion in my bed tonight!",
 "I may not go down in history, but I'll go down on you.","Do you have an Asian passport? Because I'm China get into your Japantees",
-"Are you a farmer? Because you’ve got some big, round, beautiful melons!","My love for you is like diarrhea. I just can't hold it in."];  
-  
+"Are you a farmer? Because you’ve got some big, round, beautiful melons!","My love for you is like diarrhea. I just can't hold it in."];
+
 var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.length)];
 
 
