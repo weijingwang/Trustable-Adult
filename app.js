@@ -13,7 +13,7 @@ bot.on("ready", () => {
 
 bot.on("guildCreate", guild => {
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  bot.user.setActivity(`Serving ${bot.guilds.size} servers`);
+  bot.user.setActivity(`do /help Serving ${bot.guilds.size} servers`);
 });
 
 bot.on("guildDelete", guild => {
@@ -98,7 +98,7 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
 
     message.channel.send({embed: {
     color: 3447003,
-    description: "*I am a trustable adult and i help and i dont like bad boys/girls*",
+    description: "*I am a trustable adult and i help and i dont like bad boys/girls*/",
     author: {
       name: bot.user.username + "'s",
       icon_url: bot.user.avatarURL
