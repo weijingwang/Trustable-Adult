@@ -62,7 +62,8 @@ bot.on("message", async message => {
       really mad. So I decided to make my own bot by glue coding since I\
       don't know javascript yeah?\
       this bot is currently run on my computer so it will only be on when I\
-      am on so far. I might migrate it to somewhere else maybe.");
+      am on so far. I might migrate it to somewhere else maybe.\
+      thank kyler for some python syntax --> js help!");
   }
 
   if(command === "/github") {
