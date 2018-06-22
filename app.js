@@ -29,12 +29,26 @@ bot.on("message", async message => {
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  //detect
-  if(command === "fuck" || "Fuck" || "shit" || "Shit" || "bitch" || "Bitch") {
+  //detect "fuck" || "Fuck" || "shit" || "Shit" || "bitch" || "Bitch"
+  if(command === "fuck") {
     message.channel.send("HEY!!! WHY DO YOU THINK THAT **LANGUAGE** IS **APPROPRIATE** ON **THIS** SERVER HUH???!!!");
   }
-  
-
+  if(command === "Fuck") {
+    message.channel.send("HEY!!! WHY DO YOU THINK THAT **LANGUAGE** IS **APPROPRIATE** ON **THIS** SERVER HUH???!!!");
+  }
+  if(command === "shit") {
+    message.channel.send("not cool");
+  }
+  if(command === "Shit") {
+    message.channel.send("not cool");
+  }
+  if(command === "bitch") {
+    message.channel.send("Did you mean: a female dog, wolf, fox, or otter?");
+  }
+  if(command === "Bitch") {
+    message.channel.send("Did you mean: a female dog, wolf, fox, or otter?");
+  }
+  //sorry i type that it is against my religion but it is right sorry
   //commands
   if(command === "/ping") {
     message.channel.send("Pong!");
