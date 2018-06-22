@@ -60,12 +60,14 @@ bot.on("message", async message => {
   }
 
 //joke
-var myArray = ['January', 'February', 'March'];    
-var random_joke = myArray[Math.floor(Math.random() * myArray.length)];
+var pickuplines = ['Are you a sea lion? Because I can sea you lion in my bed tonight!',
+"I may not go down in history, but I'll go down on you.","Do you have an Asian passport? Because I'm China get into your Japantees",
+"Are you a farmer? Because you’ve got some big, round, beautiful melons!"];    
+var random_pickupline = pickuplines[Math.floor(Math.random() * myArray.length)];
 
 
-  if(command === "/joke") {
-    message.channel.send(random_joke);
+  if(command === "/pickupline") {
+    message.channel.send(random_pickupline);
   }
 
 
