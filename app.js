@@ -29,8 +29,13 @@ bot.on("message", async message => {
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
+  //detect
+  if(command === "fuck" || "Fuck" || "shit" || "Shit" || "bitch" || "Bitch") {
+    message.channel.send("HEY!!! WHY DO YOU THINK THAT **LANGUAGE** IS **APPROPRIATE** ON **THIS** SERVER HUH???!!!");
+  }
   
-  
+
+  //commands
   if(command === "/ping") {
     message.channel.send("Pong!");
   }
@@ -59,11 +64,13 @@ bot.on("message", async message => {
     message.channel.send("you wannna know huh huh? https://kawaiikitsunelover645.itch.io/sounds-of-the-night");
   }
 
+
 //joke
-var pickuplines = ['Are you a sea lion? Because I can sea you lion in my bed tonight!',
+var pickuplines = ["Are you a sea lion? Because I can sea you lion in my bed tonight!",
 "I may not go down in history, but I'll go down on you.","Do you have an Asian passport? Because I'm China get into your Japantees",
-"Are you a farmer? Because you’ve got some big, round, beautiful melons!","My love for you is like diarrhea. I just can't hold it in."];    
-var random_pickupline = pickuplines[Math.floor(Math.random() * myArray.length)];
+"Are you a farmer? Because you’ve got some big, round, beautiful melons!","My love for you is like diarrhea. I just can't hold it in."];  
+  
+var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.length)];
 
 
   if(command === "/pickupline") {
@@ -89,6 +96,10 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * myArray.length)];
       {
         name: "/say",
         value: "make me say something"
+      },
+      {
+        name: "/pickupline",
+        value: "say funny stuff (use of arrays)"
       },
       {
         name: "/info",
