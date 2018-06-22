@@ -46,36 +46,39 @@ bot.on("message", async message => {
     message.channel.send("ok so on June 22, ");
   }
 
-  if(command === "/help") {
-
+  if (command == "/help") {
     message.channel.send({embed: {
     color: 3447003,
     author: {
-      name: bot.user.username + "'s",
-      icon_url: bot.user.avatarURL
+      name: client.user.username,
+      icon_url: client.user.avatarURL
     },
-    title: "xX_HELP_Xx",
+    title: "This is an embed",
+    url: "http://google.com",
+    description: "This is a test embed to showcase what they look like and what they can do.",
     fields: [{
-        name: "/ping",
-        value: "I say Pong!"
+        name: "Fields",
+        value: "They can have different fields with small headlines."
       },
       {
-        name: "/say",
-        value: "make me say something"
-      }
+        name: "Masked links",
+        value: "You can put [masked links](http://google.com) inside of rich embeds."
+      },
       {
-        name: "/info"
-        value: "make me explain myself"
+        name: "Markdown",
+        value: "You can put all the *usual* **__Markdown__** inside of them."
       }
     ],
+    timestamp: new Date(),
     footer: {
-      icon_url: bot.user.avatarURL,
-      text: "© 2018 " + current_year + " Weijing Wang"
+      icon_url: client.user.avatarURL,
+      text: "© Example"
     }
   }
-});
-  }
+});// part of help dont touch
+  }//part of help dont touch
 
-});
+
+});//end dont touch
 
 bot.login(config.token);
