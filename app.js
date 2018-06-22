@@ -37,16 +37,16 @@ bot.on("message", async message => {
     message.channel.send("HEY!!! WHY DO YOU THINK THAT **LANGUAGE** IS **APPROPRIATE** ON **THIS** SERVER HUH???!!!");
   }
   if(command === "shit") {
-    message.channel.send("not cool");
+    message.channel.send("**not cool**");
   }
   if(command === "Shit") {
-    message.channel.send("not cool");
+    message.channel.send("**not cool**");
   }
   if(command === "bitch") {
-    message.channel.send("Did you mean: a female dog, wolf, fox, or otter?");
+    message.channel.send("Did you mean: *a female dog, wolf, fox, or otter?*");
   }
   if(command === "Bitch") {
-    message.channel.send("Did you mean: a female dog, wolf, fox, or otter?");
+    message.channel.send("Did you mean: *a female dog, wolf, fox, or otter?*");
   }
   //sorry i type that it is against my religion but it is right sorry
   //commands
