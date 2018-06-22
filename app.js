@@ -51,6 +51,10 @@ bot.on("message", async message => {
       am on so far. I might migrate it to somewhere else maybe.");
   }
 
+  if(command === "/github") {
+    message.channel.send("Here is the link: https://github.com/weijingwang/Trustable-Adult");
+  }
+
   if(command === "/help") {
 
     message.channel.send({embed: {
@@ -71,6 +75,10 @@ bot.on("message", async message => {
       {
         name: "/info",
         value: "make me explain myself"
+      },
+      {
+        name: "/github",
+        value: "get github repo link"
       }
     ],
     footer: {
