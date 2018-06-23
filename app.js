@@ -47,6 +47,7 @@ checkIfBadWords("shit",'**not cool**, you know better, buddy! Try, "Bowel Moveme
 checkIfBadWords("bitch","Did you mean: *a female dog, wolf, fox, or otter?*");
 checkIfBadWords("vape","#VapeNation!!! #GoGreen! https://www.youtube.com/watch?v=Dkm8Hteeh6M");
 checkIfBadWords("penis","Hey, no good word! bad!");
+checkIfBadWords("bonzibuddy","Y(^o^)Y https://www.youtube.com/watch?v=MiRaRy4Qq8g Y(^o^)Y");
 
   //sorry i type that it is against my religion but it is right sorry
   //commands
