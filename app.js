@@ -67,14 +67,7 @@ checkIfBadWords("bonzibuddy","Y(^o^)Y https://www.youtube.com/watch?v=MiRaRy4Qq8
   }
 
   if(command === "<@459824205291192320>") {
-
-    if (command.toLowerCase().includes("hi")) {
-      message.channel.send("hi!")
-    }
-    else {
-      message.channel.send("yah")
-    }
-    
+    message.channel.send("hi!")    
   }
 
 
