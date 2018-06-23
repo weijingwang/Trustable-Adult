@@ -31,6 +31,112 @@ bot.on("message", async message => {
   const command = args.shift().toLowerCase();
   //detect "fuck" || "shit" || "bitch"
 
+const forbiddenWords = ["cum","ejaculat","fuck", "shit", "bitch", "f u c k","bi+ch","boob","c0ck","nigger","phonesex","vagina","penis","sex","sh!+","muff","mutha","muthafecker",
+    "muthafuckker",
+    "muther",
+    "mutherfucker",
+    "n1gg3r",
+    "n1gg4",
+    "n1gga",
+    "n1gger","hore",
+    "horniest",
+    "horny",
+    "hotsex",
+    "howtokill",
+    "howtomurdep",
+    "jack-off",
+    "jackoff",
+    "jap",
+    "jerk",
+    "jerk-off",
+    "jism",
+    "jiz",
+    "jizm",
+    "jizz",
+    "kawk",
+    "kinkyJesus",
+    "knobend",
+    "knob",
+    "knobead",
+    "knobed",
+    "knobend",
+    "knobhead",
+    "knobjocky",
+    "knobjokey",
+    "kock",
+    "kondum",
+    "kondums",
+    "kum",
+    "kummer",
+    "kumming",
+    "kums",
+    "kunilingus",
+    "kwif",
+    "l3i+ch",
+    "l3itch",
+    "labia",
+    "LEN",
+    "lmao",
+    "lmfao",
+    "lust",
+    "lusting",
+    "m0f0",
+    "m0fo",
+    "m45terbate",
+    "ma5terb8",
+    "ma5terbate",
+    "mafugly",
+    "masochist",
+    "master-bate",
+    "masterb8",
+    "masterbat3",
+    "masterbat*",
+    "masterbate",
+    "masterbation",
+    "masterbations",
+    "masturbate",
+    "mo-fo",
+    "mof0",
+    "mofo",
+    "mothafuck",
+    "mothafucka",
+    "mothafuckas",
+    "mothafuckaz",
+    "mothafucked",
+    "mothafucker",
+    "mothafuckers",
+    "mothafuckin",
+    "mothafucking",
+    "mothafuckings",
+    "mothafucks",
+    "motherfucker",
+    "motherfucker",
+    "motherfuck",
+    "motherfucked",
+    "motherfucker",
+    "motherfuckers",
+    "motherfuckin",
+    "motherfucking",
+    "motherfuckings",
+    "motherfuckka",
+    "motherfucks",
+    "muffpuff",];
+const forbiddenURLs = ['pornhub.com'];
+
+//deletes those bad things
+  for (var i = 0; i < forbiddenWords.length; i++) {
+  		if (msg.content.includes(forbiddenWords[i])) {
+  			msg.reply("Please, use proper language and don't swear.")
+  			msg.delete();
+  		}
+  	};
+  	for (var i = 0; i < forbiddenURLs.length; i++) {
+  		if (msg.content.includes(forbiddenURLs[i])) {
+  			msg.reply("Your URL contains links that have been blacklisted.")
+  			msg.delete()
+  		}
+  	};
+
   //use this function, checks if badWord is inside the system, if true, outputs stuffToSay
   function checkIfBadWords(badWord,stuffToSay) {
     if (command.toLowerCase().includes(badWord)) {
@@ -46,18 +152,15 @@ checkIfBadWords("fuck","HEY!!! WHY DO YOU THINK THAT **LANGUAGE** IS **APPROPRIA
 checkIfBadWords("shit",'**not cool**, you know better, buddy! Try, "Bowel Movement" instead.');
 checkIfBadWords("bitch","Did you mean: *a female dog, wolf, fox, or otter?*");
 checkIfBadWords("vape","#VapeNation!!! #GoGreen! https://www.youtube.com/watch?v=Dkm8Hteeh6M");
-//checkIfBadWords("penis","Hey, no good word! bad!");
-//checkIfBadWords("xxx","Hey, no good word! bad!");
+checkIfBadWords("penis","Hey, no good word! bad!");
+checkIfBadWords("xxx","Hey, no good word! bad!");
 
-//counseling seccession
-var sadArray = ["I'm sorry you're feeling sad. I'm here for you if you need anything.","If you want to talk, I'm a good listener!","Oh,no. It may not be much, but let me know if there is anything I can do for you.","I wish I had arms so I could give you a hug. But for now, maybe a joke or some music might help.",
-""]
-// if (checkIfBadWords("sad")) {
-//   message.channel.send(sadArray[Math.floor(Math.random() * myArray.length)]);
-// }
+#counseling seccession
+var sadArray = ["I'm sorry you're feeling sad. I'm here for you if you need anything.","If you want to talk, I'm a good listener!","Oh,no. It may not be much, but let me know if there is anything I can do for you.","I wish I had arms so I could give you a hug. But for now, maybe a joke or some music might help."]
+if (checkIfBadWords("sad")) {
+  message.channel.send(sadArray[Math.floor(Math.random() * sadArray.length)]);
+}
 
-checkIfBadWords("sad",sadArray[Math.floor(Math.random() * sadArray.length)]);
-  
 checkIfBadWords("bonzibuddy","Y(^o^)Y https://www.youtube.com/watch?v=MiRaRy4Qq8g Y(^o^)Y");
 
   //sorry i type that it is against my religion but it is right sorry
@@ -67,7 +170,6 @@ checkIfBadWords("bonzibuddy","Y(^o^)Y https://www.youtube.com/watch?v=MiRaRy4Qq8
   }
 
   if(command === "/say") {
-
     const sayMessage = args.join(" ");
     message.delete().catch(O_o=>{});
     message.channel.send(sayMessage);
@@ -143,10 +245,6 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
       {
         name: "/vn",
         value: "show suprise"
-      },
-      {
-        name: "sad",
-        value: "counseling session"
       }
     ],
     footer: {
