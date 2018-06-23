@@ -49,16 +49,17 @@ checkIfBadWords("vape","#VapeNation!!! #GoGreen! https://www.youtube.com/watch?v
 checkIfBadWords("penis","Hey, no good word! bad!");
 checkIfBadWords("xxx","Hey, no good word! bad!");
 
-
 #counseling seccession
 var sadArray = ["I'm sorry you're feeling sad. I'm here for you if you need anything.","If you want to talk, I'm a good listener!","Oh,no. It may not be much, but let me know if there is anything I can do for you.","I wish I had arms so I could give you a hug. But for now, maybe a joke or some music might help."]
 if (checkIfBadWords("sad")) {
   message.channel.send(sadArray[Math.floor(Math.random() * myArray.length)]);
 }
+  
+checkIfBadWords("bonzibuddy","Y(^o^)Y https://www.youtube.com/watch?v=MiRaRy4Qq8g Y(^o^)Y");
 
   //sorry i type that it is against my religion but it is right sorry
   //commands
-  if(checkIfBadWords("ping")) {
+  if(checkIfBadWords("/ping")) {
     message.channel.send("Pong!");
   }
 
@@ -91,7 +92,10 @@ if (checkIfBadWords("sad")) {
 //joke
 var pickuplines = ["Are you a sea lion? Because I can sea you lion in my bed tonight!",
 "I may not go down in history, but I'll go down on you.","Do you have an Asian passport? Because I'm China get into your Japantees",
-"Are you a farmer? Because you’ve got some big, round, beautiful melons!","My love for you is like diarrhea. I just can't hold it in."];
+"Are you a farmer? Because you’ve got some big, round, beautiful melons!","My love for you is like diarrhea. I just can't hold it in.",
+"That’s a beautiful smile, but it’d look even better if it was all you were wearing.","If you’re feeling down, I can feel you up.",
+"I’m making a documentary on rare unique and exotic things on earth. Can we set up a lunch this afternoon to talk about you?",
+"I’m going outside to make out. Care to join me?","Pizza is my second favourite thing to eat in bed."];
 
 var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.length)];
 
