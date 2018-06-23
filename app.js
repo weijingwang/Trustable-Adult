@@ -48,7 +48,7 @@ checkIfBadWords("vape","#VapeNation!!! #GoGreen! https://www.youtube.com/watch?v
 
   //sorry i type that it is against my religion but it is right sorry
   //commands
-  if(command === "/ping") {
+  if(checkIfBadWords("ping")) {
     message.channel.send("Pong!");
   }
 
