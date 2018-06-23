@@ -120,7 +120,7 @@ const forbiddenWords = ["cum","ejaculat","fuck", "shit", "bitch", "f u c k","bi+
     "motherfuckings",
     "motherfuckka",
     "motherfucks",
-    "muffpuff",];
+    "muffpuff"];
 const forbiddenURLs = ['pornhub.com'];
 
 //deletes those bad things
