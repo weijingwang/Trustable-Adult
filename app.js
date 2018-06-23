@@ -21,8 +21,13 @@ bot.on("guildDelete", guild => {
   bot.user.setActivity(`Serving ${bot.guilds.size} servers`);
 });
 
-function checkIfBadWords(badWord) {
-  return command.toLowerCase(.includes(badWord));
+//use this function, checks if badWord is inside the system, if true, outputs stuffToSay
+function checkIfBadWords(badWord,stuffToSay) {
+  if (command.toLowerCase.includes(badWord)) {
+    //if command contains BadWord
+    message.channel.send(stuffToSay);
+    //send message to the channel stuffToSay
+  }
 }
 
 bot.on("message", async message => {
@@ -35,21 +40,10 @@ bot.on("message", async message => {
   const command = args.shift().toLowerCase();
   //detect "fuck" || "shit" || "bitch"
   //the ".toLowerCase()" check all instances of the word, regardless of capitalization
-  if (checkIfBadWords("fuck")) {
-    message.channel.send("HEY!!! WHY DO YOU THINK THAT **LANGUAGE** IS **APPROPRIATE** ON **THIS** SERVER HUH???!!!");
-  }
-
-  if(checkIfBadWords("shit")) {
-    message.channel.send('**not cool**, you know better, buddy! Try, "Bowel Movement" instead.');
-  }
-
-  if(checkIfBadWords("bitch")) {
-    message.channel.send("Did you mean: *a female dog, wolf, fox, or otter?*");
-  }
-
-  if(checkIfBadWords("vape")) {
-    message.channel.send("#VapeNation!!! #GoGreen! https://www.youtube.com/watch?v=Dkm8Hteeh6M");
-  }
+checkIfBadWords("fuck","HEY!!! WHY DO YOU THINK THAT **LANGUAGE** IS **APPROPRIATE** ON **THIS** SERVER HUH???!!!");
+checkIfBadWords("shit",'**not cool**, you know better, buddy! Try, "Bowel Movement" instead.');
+checkIfBadWords("bitch","Did you mean: *a female dog, wolf, fox, or otter?*");
+checkIfBadWords("vape","#VapeNation!!! #GoGreen! https://www.youtube.com/watch?v=Dkm8Hteeh6M");
 
   //sorry i type that it is against my religion but it is right sorry
   //commands
