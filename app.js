@@ -83,7 +83,10 @@ checkIfBadWords("penis","Hey, no good word! bad!");
 //joke
 var pickuplines = ["Are you a sea lion? Because I can sea you lion in my bed tonight!",
 "I may not go down in history, but I'll go down on you.","Do you have an Asian passport? Because I'm China get into your Japantees",
-"Are you a farmer? Because you’ve got some big, round, beautiful melons!","My love for you is like diarrhea. I just can't hold it in."];
+"Are you a farmer? Because you’ve got some big, round, beautiful melons!","My love for you is like diarrhea. I just can't hold it in.",
+"That’s a beautiful smile, but it’d look even better if it was all you were wearing.","If you’re feeling down, I can feel you up.",
+"I’m making a documentary on rare unique and exotic things on earth. Can we set up a lunch this afternoon to talk about you?",
+"I’m going outside to make out. Care to join me?","Pizza is my second favourite thing to eat in bed."];
 
 var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.length)];
 
