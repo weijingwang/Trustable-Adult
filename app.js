@@ -107,6 +107,16 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
     message.channel.send(random_pickupline);
   }
 
+//our product is quality that you can trust
+var quality_quotes = ["A Trustable Adult is someone you can trust. Who can trust an adult who censors things?"];
+
+var random_quote = quality_quotes[Math.floor(Math.random() * quality_quotes.length)];
+
+
+  if(command === "/quote") {
+    message.channel.send(random_quote);
+  }
+
 
 
 //help
@@ -131,6 +141,10 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
       {
         name: "/pickupline",
         value: "say funny stuff (use of arrays)"
+      },
+      {
+        name: "/quote",
+        value: "get a quality quote about how Trustable Adult is trustable!!"
       },
       {
         name: "/info",
