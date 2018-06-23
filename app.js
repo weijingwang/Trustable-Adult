@@ -53,12 +53,6 @@ checkIfBadWords("penis","Hey, no good word! bad!");
   if(checkIfBadWords("/ping")) {
     message.channel.send("Pong!");
   }
-//@Trustable Adult#2902 
-const my_name = "@Trustable Adult#2902"
-
-  if(command.includes(my_name)) {
-    message.channel.send("Pong!");
-  }
 
   if(command === "/say") {
 
