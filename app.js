@@ -61,10 +61,22 @@ checkIfBadWords("sad",sadArray[Math.floor(Math.random() * sadArray.length)]);
 checkIfBadWords("bonzibuddy","Y(^o^)Y https://www.youtube.com/watch?v=MiRaRy4Qq8g Y(^o^)Y");
 
   //sorry i type that it is against my religion but it is right sorry
-  //commands
+  //commands 
   if(checkIfBadWords("/ping")) {
     message.channel.send("Pong!");
   }
+
+  if(command === "<@459824205291192320>") {
+
+    if (command.toLowerCase().includes("hi")) {
+      message.channel.send("hi!")
+    }
+    else {
+      message.channel.send("yah")
+    }
+    
+  }
+
 
   if(command === "/say") {
 
