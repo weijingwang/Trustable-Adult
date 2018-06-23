@@ -14,8 +14,8 @@ NO NOT SAFE FOR WORK Content!!! Trustable Adult is someone that is Trustworthy.
 Trustable Adult is **Not** the kind of person that would show the youth
 innapopo pictures :)
 
-**IF YOU WANT TO USE THIS BOT AND SETTING IT UP YOURSELF, YOU NEED TO DELETE THE ```node_modules``` DIRECTORY AND ```package-lock.json``` AND THEN YOU NEED TO PUT THIS IN THE TERMINAL WHEN YOU ARE IN YOUR BOT DIRECTORY: ```npm install discord.js```**
-
-**AFTER YOU DO THAT, TYPE ```node app.js``` INTO THE TERMINAL TO GET THE BOT TO START.** 
+**IF YOU WANT TO USE THIS BOT AND SETTING IT UP YOURSELF, YOU WILL NEED TO GO TO
+```config.json``` AND PASTE YOUR TOKEN INTO THE PLACE WHERE IT SAYS TOKEN AND THEN CD
+INTO THE BOT DIRECTORY AND TYPE ```node app.js``` INTO THE TERMINAL TO GET THE BOT TO START.** 
 
 **ENJOY**
