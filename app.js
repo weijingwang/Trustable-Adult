@@ -27,6 +27,7 @@ function checkIfBadWords(badWord,stuffToSay) {
     //if command contains BadWord
     message.channel.send(stuffToSay);
     //send message to the channel stuffToSay
+    return true;
   }
 }
 
