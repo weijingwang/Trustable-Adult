@@ -33,7 +33,7 @@ bot.on("message", async message => {
 
   //use this function, checks if badWord is inside the system, if true, outputs stuffToSay
   function checkIfBadWords(badWord,stuffToSay) {
-    if (command.toLowerCase.includes(badWord)) {
+    if (command.toLowerCase().includes(badWord)) {
       //if command contains BadWord
       message.channel.send(stuffToSay);
       //send message to the channel stuffToSay
