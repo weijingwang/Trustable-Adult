@@ -47,6 +47,14 @@ checkIfBadWords("shit",'**not cool**, you know better, buddy! Try, "Bowel Moveme
 checkIfBadWords("bitch","Did you mean: *a female dog, wolf, fox, or otter?*");
 checkIfBadWords("vape","#VapeNation!!! #GoGreen! https://www.youtube.com/watch?v=Dkm8Hteeh6M");
 checkIfBadWords("penis","Hey, no good word! bad!");
+checkIfBadWords("xxx","Hey, no good word! bad!");
+
+#counseling seccession
+var sadArray = ["I'm sorry you're feeling sad. I'm here for you if you need anything.","If you want to talk, I'm a good listener!","Oh,no. It may not be much, but let me know if there is anything I can do for you.","I wish I had arms so I could give you a hug. But for now, maybe a joke or some music might help."]
+if (checkIfBadWords("sad")) {
+  message.channel.send(sadArray[Math.floor(Math.random() * myArray.length)]);
+}
+  
 checkIfBadWords("bonzibuddy","Y(^o^)Y https://www.youtube.com/watch?v=MiRaRy4Qq8g Y(^o^)Y");
 
   //sorry i type that it is against my religion but it is right sorry
