@@ -113,7 +113,10 @@ var quality_quotes = ["A Trustable Adult is someone you can trust. Who can trust
 "Liars can't be trusted. I don't lie or hide things. You can trust me V(^_^)V",
 "Trust can be built over time. Nice to meet you! I am Trustable Adult",
 "A friend is someone you trust. Someone you trust is a friend.",
-"I stand up for others when I can. I will call out anyone who tries to say any big boy words. >:("];
+"I stand up for others when I can. I will call out anyone who tries to say any big boy words. >:(",
+"Trust takes years to build, seconds to break, and forever to repair. I am a smart kitsune...",
+"“The best way to find out if you can trust somebody is to trust them.” – Ernest Hemingway",
+"“Whoever is careless with the truth in small matters cannot be trusted with important matters.” – Albert Einstein"];
 
 var random_quote = quality_quotes[Math.floor(Math.random() * quality_quotes.length)];
 
