@@ -43,9 +43,9 @@ bot.on("message", async message => {
     }
   }
 
-  if (msg.guild)
-  {
+  if (msg.guild) {
       var string = msg.content;
+      console.log(string);
       var word = string.split(" ");
       var lower = string.toLowerCase();
       console.log(lower);
@@ -84,6 +84,7 @@ checkIfBadWords("bonzibuddy","Y(^o^)Y https://www.youtube.com/watch?v=MiRaRy4Qq8
   //commands
   if(checkIfBadWords("/ping")) {
     message.channel.send("Pong!");
+    console.log("Pong!");
   }
 
   if(command === "<@459824205291192320>") {
