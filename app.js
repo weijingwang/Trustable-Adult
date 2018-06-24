@@ -50,7 +50,7 @@ bot.on("message", async message => {
       //console.log(lower);
       //console.log(string);
       console.log(message.content);
-      console.log(swears);
+      //console.log(swears);
       for (i = 0; i < 1000; i++)
       {
           if (lower.indexOf(swears.list[i]) >= 0)
