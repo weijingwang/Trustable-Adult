@@ -20,8 +20,9 @@ Dependencies: NodeJS LTS or better, NPM
 
 To install the package dependencies, use ```npm install```
 
-Then edit the file config.json and paste in your token under the "token" json.
 
-Finally, to startup your bot, use ```node app.js```.
+First, get a discord bot token for the API here: https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token. Then edit the file config.json and paste in your token under the "token" json.
+
+Finally, to startup your bot, use ```node app.js``` on your server.
 
 **ENJOY!!! :)**
