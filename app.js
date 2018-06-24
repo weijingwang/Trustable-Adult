@@ -55,7 +55,7 @@ bot.on("message", async message => {
       console.log(message.content);
       //console.log(swears);
       //loop 1000 times
-      for (i = 0; i < 1000; i++)
+      for (i = 0; i < 2000; i++)
       {
           //checks through all values in the list.
           if (lower.indexOf(swears.list[i]) >= 0)
