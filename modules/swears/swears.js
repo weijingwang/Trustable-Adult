@@ -540,7 +540,6 @@ exports.list=[
 "viagra",
 "vulva",
 "w00se",
-"wang",
 "wank",
 "wanker",
 "wanky",
