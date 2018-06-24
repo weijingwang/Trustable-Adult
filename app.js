@@ -43,7 +43,10 @@ bot.on("message", async message => {
     }
   }
 
+
+  //check all msg against a swear list
   if (message.guild) {
+      //format txt into readable format
       var string = message.content;
       var word = string.split(" ");
       var lower = string.toLowerCase();
@@ -51,12 +54,18 @@ bot.on("message", async message => {
       //console.log(string);
       console.log(message.content);
       //console.log(swears);
+      //loop 1000 times
       for (i = 0; i < 1000; i++)
       {
+          //checks through all values in the list.
           if (lower.indexOf(swears.list[i]) >= 0)
           {
+            //If really bad word is true
               console.log(i);
+              //remove message from channel
               message.delete();
+              //fansy dancy msg
+              message.channel.send("Hey! Your on santa's bad list now!");
               break;
           }
       }
