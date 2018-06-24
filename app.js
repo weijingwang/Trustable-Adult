@@ -52,6 +52,7 @@ bot.on("message", async message => {
       console.log(message.content);
       for (i = 0; i < swears.length + 1; i++)
       {
+          console.log(lower.indexOf(swears.list[i]))
           if (lower.indexOf(swears.list[i]) >= 0)
           {
               console.log(i);
