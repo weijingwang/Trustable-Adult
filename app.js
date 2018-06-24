@@ -53,7 +53,7 @@ bot.on("message", async message => {
       console.log(message.content);
       for (i = 0; i < 554; i++)
       {
-          if (status && lower.indexOf(swears.list[i]) >= 0)
+          if (lower.indexOf(swears.list[i]) >= 0)
           {
               console.log(i);
               message.delete();
