@@ -4,6 +4,8 @@ const bot = new Discord.Client();
 
 const config = require("./config.json");
 
+const swears = require('./modules/swears/swears.js');
+
 const current_year = new Date().getFullYear();
 
 bot.on("ready", () => {
@@ -39,6 +41,25 @@ bot.on("message", async message => {
       //send message to the channel stuffToSay
       return true;
     }
+  }
+
+  if (msg.guild)
+  {
+      var string = msg.content;
+      var word = string.split(" ");
+      var lower = string.toLowerCase();
+      console.log(lower);
+      console.log(string);
+      console.log(msg.content);
+      for (i = 0; i < 554; i++)
+      {
+          if (status && lower.indexOf(swears.list[i]) >= 0)
+          {
+              console.log(i);
+              msg.delete();
+              break;
+          }
+      }
   }
 
   //the ".toLowerCase()" check all instances of the word, regardless of capitalization
