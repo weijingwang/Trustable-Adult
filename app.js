@@ -43,20 +43,20 @@ bot.on("message", async message => {
     }
   }
 
-  if (msg.guild) {
-      var string = msg.content;
+  if (message.guild) {
+      var string = message.content;
       console.log(string);
       var word = string.split(" ");
       var lower = string.toLowerCase();
       console.log(lower);
       console.log(string);
-      console.log(msg.content);
+      console.log(message.content);
       for (i = 0; i < 554; i++)
       {
           if (status && lower.indexOf(swears.list[i]) >= 0)
           {
               console.log(i);
-              msg.delete();
+              message.delete();
               break;
           }
       }
