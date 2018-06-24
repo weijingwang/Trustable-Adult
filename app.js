@@ -45,13 +45,12 @@ bot.on("message", async message => {
 
   if (message.guild) {
       var string = message.content;
-      console.log(string);
       var word = string.split(" ");
       var lower = string.toLowerCase();
       console.log(lower);
       console.log(string);
       console.log(message.content);
-      for (i = 0; i < 554; i++)
+      for (i = 0; i < swears.length + 1; i++)
       {
           if (lower.indexOf(swears.list[i]) >= 0)
           {
