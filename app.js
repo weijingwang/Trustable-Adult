@@ -47,12 +47,12 @@ bot.on("message", async message => {
       var string = message.content;
       var word = string.split(" ");
       var lower = string.toLowerCase();
-      console.log(lower);
-      console.log(string);
+      //console.log(lower);
+      //console.log(string);
       console.log(message.content);
-      for (i = 0; i < swears.length + 1; i++)
+      console.log(swears);
+      for (i = 0; i < 1000; i++)
       {
-          console.log(lower.indexOf(swears.list[i]))
           if (lower.indexOf(swears.list[i]) >= 0)
           {
               console.log(i);
