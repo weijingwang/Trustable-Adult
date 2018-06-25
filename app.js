@@ -6,6 +6,8 @@ const config = require("./config.json");
 
 const swears = require('./modules/swears/swears.js');
 
+var unirest = require('unirest');
+
 const current_year = new Date().getFullYear();
 
 bot.on("ready", () => {
@@ -44,7 +46,7 @@ bot.on("message", async message => {
   }
 
 
-  //check all msg against a swear list
+  //check all msg against a bad kid list list
   if (message.guild) {
       //format txt into readable format
       var string = message.content;
@@ -55,8 +57,7 @@ bot.on("message", async message => {
       console.log(message.content);
       //console.log(swears);
       //loop 1000 times
-      for (i = 0; i < 2000; i++)
-      {
+      for (i = 0; i < 2000; i++) {
           //checks through all values in the list.
           if (lower.indexOf(swears.list[i]) >= 0)
           {
@@ -143,21 +144,15 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
   }
 
 //our product is quality that you can trust
-var quality_quotes = ["A Trustable Adult is someone you can trust. Who can trust an adult who censors things?",
-"Do you trust me? You should. I am a Trustable Adult.",
-"Liars can't be trusted. I don't lie or hide things. You can trust me V(^_^)V",
-"Trust can be built over time. Nice to meet you! I am Trustable Adult",
-"A friend is someone you trust. Someone you trust is a friend.",
-"I stand up for others when I can. I will call out anyone who tries to say any big boy words. >:(",
-"Trust takes years to build, seconds to break, and forever to repair. I am a smart kitsune...",
-"“The best way to find out if you can trust somebody is to trust them.” – Ernest Hemingway",
-"“Whoever is careless with the truth in small matters cannot be trusted with important matters.” – Albert Einstein"];
-
-var random_quote = quality_quotes[Math.floor(Math.random() * quality_quotes.length)];
-
-
+//request quote from api
   if(command === "/quote") {
-    message.channel.send(random_quote);
+    unirest.get("https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous")
+.header("X-Mashape-Key", "gY8GQOVzJbmsh0SGQNT0yJoV2MLEp1ssXFLjsnFY9xdzBsenNr")
+.header("Accept", "application/json")
+.end(function (result) {
+  console.log(result.status, result.headers, result.body);
+  message.channel.send(result.body);
+});
   }
 
 

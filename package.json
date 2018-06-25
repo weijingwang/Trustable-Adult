@@ -11,6 +11,7 @@
     "safe-buffer": "^5.1.2",
     "snekfetch": "^4.0.4",
     "tweetnacl": "^1.0.0",
+    "unirest": "^0.5.1",
     "ws": "^5.2.1"
   },
   "devDependencies": {},
