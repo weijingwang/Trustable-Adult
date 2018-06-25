@@ -170,9 +170,8 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
         text: result.body[0]["author"]
       }
     }
-
   });
-    });
+    }}
 
 //help
   if(command === "/help") {
