@@ -151,16 +151,12 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
 //our product is quality that you can trust
 //request quote from api
   if(command === "/quote") {
-    unirest.get("https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous")
-    .header("X-Mashape-Key", "gY8GQOVzJbmsh0SGQNT0yJoV2MLEp1ssXFLjsnFY9xdzBsenNr")
-    .header("Accept", "application/json")
+    unirest.get("https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous").header("X-Mashape-Key", "gY8GQOVzJbmsh0SGQNT0yJoV2MLEp1ssXFLjsnFY9xdzBsenNr").header("Accept", "application/json")
     .end(function (result) {
       console.log(result.status, result.headers, result.body);
       //message.channel.send(result.body[0]["quote"] + ' - ' + result.body[0]["author"]);
       //nice and pretty quote
-      message.channel.send({embed: {
-      color: 3447003,
-      title: "xX_HELP_Xx",
+      message.channel.send({embed: {color: 3447003,title: "Quote",
       fields: [{
           name: "",
           value: result.body[0]["quote"]
