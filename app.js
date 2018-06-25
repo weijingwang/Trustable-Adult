@@ -138,7 +138,8 @@ var pickuplines = ["I may not go down in history, but I'll go down on you.",
 "Are you a pair of scissors? Because you look sharp ✂️",
 "Do you know CPR? Because I bet you take everyone's breath away",
 "You make my heart take flight✈️",
-"You know what's on the menu? Me-n-u 😘 "];
+"You know what's on the menu? Me-n-u 😘 ",
+"Are you a library book? Because I'm checking you out 📚"];
 
 var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.length)];
 
