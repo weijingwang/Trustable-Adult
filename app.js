@@ -167,7 +167,7 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
       }
     }
   });
-    }}
+    )}}
 
 //help
   if(command === "/help") {
