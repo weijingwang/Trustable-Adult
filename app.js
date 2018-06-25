@@ -66,7 +66,7 @@ bot.on("message", async message => {
               //remove message from channel
               message.delete();
               //fansy dancy msg
-              message.channel.send("Hey! Your on santa's bad list now!");
+              //message.channel.send("Hey! Your on santa's bad list now!");
               break;
           }
       }
