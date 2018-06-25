@@ -147,12 +147,13 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
 //request quote from api
   if(command === "/quote") {
     unirest.get("https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous")
-.header("X-Mashape-Key", "gY8GQOVzJbmsh0SGQNT0yJoV2MLEp1ssXFLjsnFY9xdzBsenNr")
-.header("Accept", "application/json")
-.end(function (result) {
-  console.log(result.status, result.headers, result.body);
-  message.channel.send(result.body.[0].quote + " - " + result.body.[0].author);
-});
+    .header("X-Mashape-Key", "gY8GQOVzJbmsh0SGQNT0yJoV2MLEp1ssXFLjsnFY9xdzBsenNr")
+    .header("Accept", "application/json")
+    .end(function (result) {
+      console.log(result.status, result.headers, result.body);
+      quoteSpam = JSON.parse(result.body);
+      message.channel.send(quoteSpam.quote + " - " + quoteSpam.author);
+    });
   }
 
 
