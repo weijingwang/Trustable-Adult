@@ -152,6 +152,7 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
     .end(function (result) {
       console.log(result.status, result.headers, result.body);
       quoteSpam = '"quote":' + result.body;
+      console.log(quoteSpam)
       message.channel.send(quoteSpam.quote + " - " + quoteSpam.author);
     });
   }
