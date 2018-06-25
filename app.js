@@ -62,7 +62,7 @@ checkIfBadWords("bonzibuddy","Y(^o^)Y https://www.youtube.com/watch?v=MiRaRy4Qq8
 
   //sorry i type that it is against my religion but it is right sorry
   //commands 
-  if(checkIfBadWords("/ping")) {
+  if(command === "/ping") {
     message.channel.send("Pong!");
   }
 
