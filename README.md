@@ -1,6 +1,8 @@
 # Trustable-Adult
 The Trustable Adult Discord Bot
 
+[![Discord Bots](https://discordbots.org/api/widget/460663266541043712.svg)](https://discordbots.org/bot/460663266541043712)
+
 Trustable Adult is a Discord bot by Weijing Wang and Kyler Chin and it is truly
 a trustable adult.
 
