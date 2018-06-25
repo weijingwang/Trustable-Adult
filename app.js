@@ -154,7 +154,7 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
     unirest.get("https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous").header("X-Mashape-Key", "gY8GQOVzJbmsh0SGQNT0yJoV2MLEp1ssXFLjsnFY9xdzBsenNr").header("Accept", "application/json")
     .end(function (result) {
       console.log(result.status, result.headers, result.body);
-      //message.channel.send(result.body[0]["quote"] + ' - ' + result.body[0]["author"]);
+      message.channel.send(result.body[0]["quote"] + ' - ' + result.body[0]["author"]);
       //nice and pretty quote
       message.channel.send({embed: {color: 3447003,title: "Quote",
       fields: [{
