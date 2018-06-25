@@ -182,7 +182,7 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
       },
       {
         name: "/quote",
-        value: "get a quality quote about how Trustable Adult is trustable!!"
+        value: "get a quality quote!"
       },
       {
         name: "/info",
