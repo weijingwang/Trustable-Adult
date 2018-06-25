@@ -158,7 +158,7 @@ var random_pickupline = pickuplines[Math.floor(Math.random() * pickuplines.lengt
       //nice and pretty quote
       message.channel.send({embed: {color: 3447003,title: "Quote",
       fields: [{
-          name: "",
+          name: "Quote:",
           value: result.body[0]["quote"]
         },
       ],
