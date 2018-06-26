@@ -19,3 +19,6 @@ innapopo pictures :)
 INTO THE BOT DIRECTORY AND TYPE ```node app.js``` INTO THE TERMINAL TO GET THE BOT TO START.** 
 
 **ENJOY**
+
+# Invite Link
+https://discordapp.com/oauth2/authorize?&client_id=459824205291192320&scope=bot&permissions=0
